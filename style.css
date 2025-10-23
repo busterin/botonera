@@ -57,14 +57,14 @@ body {
     position: relative;
     color: transparent; /* Hide text behind the button */
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-container .row .btn::before {
     content: attr(data-letter); /* Display letter on button */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: black; /* Color of the letter */
     font-size: 25px;
     font-weight: bold;
