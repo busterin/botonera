@@ -24,15 +24,15 @@ body {
     background-image: url('Pantalla.jpg'); /* Background image for the screen */
     background-size: cover;
     color: white;
-    font-size: 25px; /* Reduced font size for the screen */
-    padding: 15px;
-    margin-bottom: 20px;
+    font-size: 20px; /* Reduced font size for the screen */
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 8px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px; /* Reduced height */
+    height: 60px; /* Reduced height */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -68,7 +68,7 @@ body {
     color: black; /* Color of the letter */
     font-size: 25px;
     font-weight: bold;
-    left: 50%;  /* Move left slightly */
+    left: 40%;  /* Moved slightly more to the left */
     transform: translateX(-50%); /* Center horizontally */
 }
 
