@@ -20,13 +20,14 @@ const handleButtonClick = (event) => {
         button.classList.add('pressed'); // Apply the sinking effect
     }
 
-    // If all 4 correct buttons are selected, show "TESORO" on the screen
-    if (correctLetters.every(letter => selectedButtons.includes(letter))) {
+    // Check if all 4 correct buttons are selected and no incorrect buttons are pressed
+    if (correctLetters.every(letter => selectedButtons.includes(letter)) &&
+        selectedButtons.length === correctLetters.length) {
         setTimeout(() => {
             document.getElementById('screen-text').textContent = "TESORO";
         }, 300);  // Delay to allow the button press effect to finish
     } else {
-        // Clear the screen if not all correct buttons are pressed
+        // Clear the screen if there are incorrect buttons selected
         document.getElementById('screen-text').textContent = '';
     }
 };
