@@ -68,7 +68,7 @@ body {
     color: black; /* Color of the letter */
     font-size: 25px;
     font-weight: bold;
-    left: 40%;  /* Moved slightly more to the left */
+    left: 45%;  /* Moved slightly to the right */
     transform: translateX(-50%); /* Center horizontally */
 }
 
