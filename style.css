@@ -6,14 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e1e1e1;
+    background-color: transparent; /* Transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('https://www.publicdomainpictures.net/pictures/270000/velka/wood-background-texture.jpg') no-repeat center center fixed;
-    background-size: cover;
 }
 
 .game-container {
@@ -23,13 +21,19 @@ body {
 }
 
 .screen {
-    background-color: #000;
+    background-image: url('Pantalla.jpg'); /* Background image for the screen */
+    background-size: cover;
     color: white;
     font-size: 30px;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .button-container .row {
@@ -39,15 +43,31 @@ body {
 }
 
 .button-container .row .btn {
-    background-color: white;
-    border: none;
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
+    background-image: url('botones.png'); /* Background image for buttons */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
     margin: 0 10px;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
+    position: relative;
+    color: transparent; /* Hide text behind the button */
+    font-family: Arial, sans-serif;
+}
+
+.button-container .row .btn::before {
+    content: attr(data-letter); /* Display letter on button */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* Color of the letter */
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .button-container .row .btn.pressed {
@@ -59,5 +79,5 @@ button:focus {
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.5); /* Slight hover effect */
 }
