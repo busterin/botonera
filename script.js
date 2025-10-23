@@ -1,6 +1,9 @@
 // Array to store the letters that have been pressed
 let selectedButtons = [];
 
+// Array of the correct letters that trigger "TESORO"
+const correctLetters = ['A', 'H', 'K', 'F'];
+
 // Function to handle button click
 const handleButtonClick = (event) => {
     const button = event.target;
@@ -14,8 +17,8 @@ const handleButtonClick = (event) => {
     // Apply the sinking effect to the button
     button.classList.add('pressed');
 
-    // If 4 buttons are selected, show "TESORO" on the screen
-    if (selectedButtons.length === 4) {
+    // If all 4 correct buttons are selected, show "TESORO" on the screen
+    if (correctLetters.every(letter => selectedButtons.includes(letter))) {
         setTimeout(() => {
             document.getElementById('screen-text').textContent = "TESORO";
         }, 300);  // Delay to allow the button press effect to finish
