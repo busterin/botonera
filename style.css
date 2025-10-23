@@ -25,14 +25,14 @@ body {
     background-size: cover;
     color: white;
     font-size: 20px; /* Reduced font size for the screen */
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 8px;
+    margin-bottom: 20px;
     border-radius: 8px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px; /* Reduced height */
+    height: 50px; /* Reduced height */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
